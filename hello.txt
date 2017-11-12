@@ -1,0 +1,12 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 62AE-ABA8
+
+ Directory of C:\Users\HP\Desktop\Javaproject
+
+11/13/2017  01:50 AM    <DIR>          .
+11/13/2017  01:50 AM    <DIR>          ..
+11/12/2017  09:57 PM               675 Hello.class
+11/12/2017  09:51 PM               168 Hello.java
+11/13/2017  01:50 AM                 0 hello.txt
+               3 File(s)            843 bytes
+               2 Dir(s)  48,346,984,448 bytes free
