@@ -1,0 +1,98 @@
+<CustomPolicy xmlns="http://www.cisco.com/nccm/api/schemas/1.1" id="_SNMPFailure">
+    <Title><![CDATA[SNMPFailure]]></Title>
+    
+    <CreatedOn><![CDATA[1478694896208]]></CreatedOn>
+    <ModifiedOn><![CDATA[1478695002734]]></ModifiedOn>
+    <CreatedUser><![CDATA[admin]]></CreatedUser>
+    <PolicyType><![CDATA[WIZARD]]></PolicyType>
+    <Categories>
+       <Category id="_CCM_USER_DEFINED" type="category">CCM_USER_DEFINED</Category>
+    </Categories>
+    <VersionSelectorRefs>
+      <VersionSelectorRef><![CDATA[ios]]></VersionSelectorRef>
+      <VersionSelectorRef><![CDATA[iosxe]]></VersionSelectorRef>
+    </VersionSelectorRefs>
+    <References>
+      <Reference identifier="Custom">
+        <Source>Custom</Source>
+        <Sections>Custom Sections</Sections>
+        <Versions>Custom Versions</Versions>
+      </Reference>
+    </References>
+    <Rules>
+      <Rule identifier="_SNMP_Communities">
+        <Title><![CDATA[SNMP Communities]]></Title>
+        <VersionSelectorRefs>
+          <VersionSelectorRef>ios</VersionSelectorRef>
+          <VersionSelectorRef>iosxe</VersionSelectorRef>
+        </VersionSelectorRefs>
+         <RuleType>RAW_CONFIG</RuleType>
+        <Inputs>
+          <Input identifier="_com_ro1">
+            <Title>RO community</Title>
+            <DataType>String</DataType>
+            <Scalar>true</Scalar>
+            <Required>true</Required>
+            <Scope>Fix</Scope>
+            <CustomConstraint>&lt;Access&gt;&lt;AccessMode&gt;ReadWrite&lt;/AccessMode&gt;&lt;Key&gt;false&lt;/Key&gt;&lt;Required&gt;true&lt;/Required&gt;&lt;/Access&gt;&lt;Value&gt;&lt;DefaultValue&gt;public&lt;/DefaultValue&gt;&lt;InputScope&gt;Fix&lt;/InputScope&gt;&lt;IsLOV&gt;false&lt;/IsLOV&gt;&lt;/Value&gt;</CustomConstraint>
+          </Input>
+          <Input identifier="_com_rw">
+            <Title>RW community</Title>
+            <DataType>String</DataType>
+            <Scalar>true</Scalar>
+            <Required>true</Required>
+            <Scope>Fix</Scope>
+            <CustomConstraint>&lt;Access&gt;&lt;AccessMode&gt;ReadWrite&lt;/AccessMode&gt;&lt;Key&gt;false&lt;/Key&gt;&lt;Required&gt;true&lt;/Required&gt;&lt;/Access&gt;&lt;Value&gt;&lt;DefaultValue&gt;private&lt;/DefaultValue&gt;&lt;InputScope&gt;Fix&lt;/InputScope&gt;&lt;IsLOV&gt;false&lt;/IsLOV&gt;&lt;/Value&gt;</CustomConstraint>
+          </Input>
+        </Inputs>
+        <Conditions>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must contain the string snmp-server community dddfffgggg RO]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_AND_CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[RO community  not found]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[RO community  not found]]></Message>
+            <Fix><![CDATA[snmp-server community ro ^<_com_ro1>^ RO]]></Fix>
+            </Violation>
+            <Scope>ALL_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[snmp-server community dddfffgggg RO]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must contain the string snmp-server community dddfff RW]]></DisplayString>
+            <MatchAction>DONT_RAISE_RETURN</MatchAction>
+            <NonMatchAction>RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[RW community  not found]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[RW community  not found]]></Message>
+            <Fix><![CDATA[snmp-server community rw ^<_com_rw>^ RW]]></Fix>
+            </Violation>
+            <Scope>ALL_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[snmp-server community dddfff RW]]></Value>
+          </Condition>
+        </Conditions>
+      </Rule>
+    </Rules>
+</CustomPolicy>

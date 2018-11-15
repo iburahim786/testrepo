@@ -1,0 +1,57 @@
+<testdata xmlns="http://www.cisco.com/tea/0.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.cisco.com/tea/0.1.0 http://tea/schema/dataprovider-v0_1_0.xsd">
+
+    <test id="CompleEnableFunctionality" name="Tny871148c">
+		<dataset id="Tny871148c" name="CompleEnableFunctionality" description="Test Check the Compliance Enable Functionality">
+			<data name="sValue" value="49" />	
+			<data name="mailServerName" value="outbound.cisco.com" />
+			<data name="mailerAddress" value="primeinfracisco@gmail.com" />
+			<data name="mailSubject" value="Compliance-JobStatus" />
+			<data name="JobNotToasterMsg" value="Job Notification Settings saved successfully" />
+		</dataset>
+	</test>
+	
+	<test id="ComplPolicyDeviceSetting" name="Tny4203827c">
+		<dataset id="Tny4203827c" name="ComplPolicyDeviceSetting" description="Compliance policies that collect data from the device properties setting don't retain their config">
+			<data name="PolicyName" value="DevPropSetting" />
+			<data name="PolDesc" value="Device property Value retain validation" />	
+			<data name="RuleTitle" value="Device Propery Setting" />
+		    <data name="CondScopeValue" value="Device Properties" />
+		    <data name="CondScopeValue1" value="Configuration" />
+		    <data name="devprop" value="IP Address" />
+		    <data name="Operator" value="Contains the string" />
+		    <data name="OpValue" value="IP Address" />
+		    <data name="SelcetActMat" value="Continue" />
+		    <data name="SelcetActDMat" value="Raise a Violation and Continue" />
+		    <data name="Severity" value="Critical" />
+		    <data name="VioMsgtype" value="Default Violation Message" />
+		 </dataset>
+	</test>
+	
+	<test id="ComplIncludeLogBundleCheck" name="Tny2453103c">
+		<dataset id="Tny2453103c" name="ComplIncludeLogBundleCheck" description="Test check Include all compliance logs in log bundle">
+			<data name="id" value="Tny2453103c" />
+		</dataset>
+	</test>
+	
+	<test id="ComplJobEditFUnction" name="Tny2407127c">
+		<dataset id="Tny2407127c" name="ComplJobEditFUnction" description="Test check Compliance Job Edit Function">
+		<data name="test" value="test" />
+		</dataset>
+	</test>
+	
+	<test id="PsirtHelpIconValidation" name="Tny1682643c">
+		<dataset id="Tny1682643c" name="PsirtHelpIconValidation" description="Test Check the Compliance PSIRT Help Icon functionality">
+			<data name="HelpWindowTitle" value="Cisco Prime Infrastructure Online Help" />
+		</dataset>
+	</test>
+	
+	<test id="JobNotificationMail" name="Tny3232541c">
+		<dataset id="Tny3232541c" name="JobNotificationMail" description="Test Check the Job mail Notification functionality">
+			<data name="url" value="https://www.google.com/gmail/about/" />
+			<data name="usernameid" value="primeinfracisco" />
+			<data name="password" value="roZes123" />
+			<data name="mailSubject" value="Compliance-JobStatus" />
+		</dataset>
+	</test>
+</testdata>

@@ -1,0 +1,51 @@
+<testdata xmlns="http://www.cisco.com/tea/0.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.cisco.com/tea/0.1.0 http://tea/schema/dataprovider-v0_1_0.xsd">
+
+    <test id="CompleEnableFunctionality" name="Tny871148c">
+		<dataset id="Tny871148c" name="CompleEnableFunctionality" description="Test Check the Compliance Enable Functionality">
+			<data name="sValue" value="49" />	
+			<data name="mailServerName" value="outbound.cisco.com" />
+			<data name="mailerAddress" value="primeinfracisco@gmail.com" />
+			<data name="mailSubject" value="Compliance-JobStatus" />
+			<data name="JobNotToasterMsg" value="Job Notification Settings saved successfully" />
+		</dataset>
+	</test>
+	
+	<test id="DeviceImageOSversionInPsirt" name="Tny3276012c,Tny2620098c,Tny3032896c,Tny3630741c,Tny3630742c,Tny3630743c,Tny3630744c,Tny3630745c">
+		<dataset id="Tny3276012c,Tny2620098c,Tny3630740c,Tny3032896c,Tny3630741c,Tny3630742c,Tny3630743c,Tny3630744c,Tny3630745c" name="DeviceImageOSversionInPsirt" description="Test check PSIRT results-IOS/XE/XR/NX/WLC/ASA version before and After changed in the device">
+	        <data name="policyName" value="MultiRulePolicy" />
+			<data name="deviceid-IOS" value="switch4" />
+			<data name="deviceid-XE" value="ngwlc1" />
+			<data name="deviceid-ASA" value="asa1" />
+			<data name="deviceid-NxOS" value="nexus1" />
+			<data name="deviceid-WLC" value="wlc2" />
+			<data name="NetworkId" value="16.0.0.0" />
+			<data name="NetMask" value="255.0.0.0" />
+			<data name="SaproIpaddress" value="10.197.71.100" />
+			<data name="SaproSshUsername" value="root" />
+			<data name="SaproSshPassword" value="Snp@123" />
+			<data name="file1" value="IOS_Image_version_Change-1.sh" />
+			<data name="file2" value="IOS_Image_version_Change-2.sh" />
+			<data name="DeviceCsvFileName" value="ExpDevSimulAuto.csv" />
+		</dataset>
+	</test>
+	
+	<test id="SimilarDevicePsirtValidation" name="Tny3630727c,Tny3630728c,Tny3630729c,Tny3630730c,Tny3630731c,Tny3630732c">
+		<dataset id="Tny3630727c,Tny3630728c,Tny3630729c,Tny3630730c,Tny3630731c,Tny3630732c" name="DeviceImageOSversionInPsirt" description="Test check PSIRT results for similar device for IOS/XE/NX/ASA/XR">
+	        <data name="IOSdevType" value="3560" />
+			<data name="XEdevType" value="1002" />
+			<data name="ASAdevType" value="5510" />
+			<data name="NxOSdevType" value="7000" />
+			<data name="WLCdevType" value="5508" />
+		</dataset>
+	</test>
+	
+	<test id="psirtEoxFnValidation" name="Tny1682627c,Tny1682631c,Tny1682632c,Tny1682635c">
+		<dataset id="Tny1682627c,Tny1682631c,Tny1682632c,Tny1682635c" name="psirtEoxFnValidation" description="Test check PSIRT/EOX/FN results ">
+	        <data name="PsirtTitle" value="Cisco" />
+			<data name="EolTitle" value="Yes" />
+			<data name="FnTitle" value="FN" />
+		</dataset>
+	</test>
+	
+</testdata>

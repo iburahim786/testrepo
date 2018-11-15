@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Compliance" verbose="10">
+ <test name="Compliance Test">
+ 	<parameter name="browser" value="firefox"></parameter>
+ 	<classes>
+    	<class name="com.cisco.ui.test.compliance.test.ComplianceTest" />
+ 	</classes>
+ </test>
+ <listeners>
+		<listener class-name="com.cisco.test.tea.log.TestResultLoggingListener" />
+ </listeners>
+</suite>

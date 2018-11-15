@@ -1,0 +1,34 @@
+<testdata xmlns="http://www.cisco.com/tea/0.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.cisco.com/tea/0.1.0 http://tea/schema/dataprovider-v0_1_0.xsd">
+
+    <test id="CompleEnableFunctionality" name="Tny871148c">
+		<dataset id="Tny871148c" name="CompleEnableFunctionality" description="Test Check the Compliance Enable Functionality">
+			<data name="sValue" value="49" />
+		</dataset>
+	</test>
+	
+	<test id="ComplianceScaleAuditPSIRTJob" name="Tny2407866c,Tny2407867c">
+		<dataset id="Tny2407866c,Tny2407867c" name="ComplianceScaleAuditPSIRTJob" description="Test Scale Scenario">
+			<data name="policyName" value="MultiRulePolicy" />
+			<data name="exeLocation" value="C:\\Compliance\\InputFile\\policyuploadSnmpSuccess.exe" />
+			<data name="ProfName" value="scaleprof" />
+			<data name="AJobName" value="scaleajob" />
+			<data name="ProDesc" value="Scale Audit job" />
+			<data name="Polcat" value="User Defined" />
+			<data name="policyName" value="SNMPSuccess" />
+			<data name="ArchiveSel" value="current" />
+			<data name="Recurrence" value="no" />
+			<data name="FixInput1" value="public" />
+			<data name="FixInput2" value="private" />
+		</dataset>
+	</test>
+	
+	<test id="ComplianceScaleFixJob" name="Tny2407868c,Tny2407869c">
+		<dataset id="Tny2407868c,Tny2407869c" name="ComplianceScaleFixJob" description="Test Scale Scenario">
+		<data name="FJobName1" value="scalefjoba" />
+		<data name="FJobName2" value="scalefjobb" />
+		<data name="FixInput1" value="public" />
+		<data name="FixInput2" value="private" />
+		</dataset>
+	</test>
+</testdata>
