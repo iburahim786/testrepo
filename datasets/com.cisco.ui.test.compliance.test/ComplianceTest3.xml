@@ -1,0 +1,63 @@
+<testdata xmlns="http://www.cisco.com/tea/0.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.cisco.com/tea/0.1.0 http://tea/schema/dataprovider-v0_1_0.xsd">
+
+    <test id="CompleEnableFunctionality" name="Tny871148c">
+		<dataset id="Tny871148c" name="CompleEnableFunctionality" description="Test Check the Compliance Enable Functionality">
+			<data name="sValue" value="49" />	
+			<data name="mailServerName" value="outbound.cisco.com" />
+			<data name="mailerAddress" value="complianceemailfeature@gmail.com" />
+			<data name="mailSubject" value="Compliance-Jobs" />
+			<data name="JobNotToasterMsg" value="Job Notification Settings saved successfully" />
+		</dataset>
+	</test>
+	
+	<test id="ComplianceEmailFeature" name="Tny1682470c">
+		<dataset id="Tny5234863c,Tny5234864c,Tny5234867c,Tny5244253c,Tny5234868c,Tny5244250c,Tny5234869c" name="ComplianceEmailFeature" description="Test Check the Compliance Job results">
+			<data name="policyName" value="SNMPSuccess" />
+			<data name="exeLocation" value="C:\\Compliance\\InputFile\\policyuploadSnmpSuccess.exe" />
+			<data name="Recurrence" value="no" />
+			<data name="Recurrence1" value="yes" />
+			<data name="url" value="https://www.google.com/gmail/about/" />
+			<data name="usernameid" value="complianceemailfeature" />
+			<data name="password" value="roZes123" />
+			<data name="JobType" value="Compliance Audit Job" />
+			<data name="ArchiveSel" value="Current" />
+			<data name="JobType1" value="Compliance Fix Job" />
+			<data name="SerHostName" value="miburahi-107" />
+			<data name="ServerIp" value="10.197.71.107" />
+			<data name="mailSubject" value="Compliance-Jobs" />
+			<data name="ProfName" value="MailFeature" />
+			<data name="ProfName1" value="MailScheduled" />
+			<data name="AuditJobName" value="MailAuditJob" />
+			<data name="FixJobName" value="MailFixJob" />
+			<data name="AudSchdJobName" value="MailAudSchJob" />
+			<data name="ProDesc" value="Mail Feature Testing" />
+			<data name="FixJobName" value="MailFixJob" />
+			<data name="deviceid" value="switch2a" />
+			<data name="Polcat" value="User Defined" />
+			<data name="MinValue" value="2" />
+			<data name="FixInput1" value="public" />
+			<data name="FixInput2" value="private" />
+		</dataset>
+	</test>
+    <test id="ComplianceHyperLinkValidation" name="Tny1682470c">
+		<dataset id="Tny5244249c,Tny5234865c,Tny5234866c" name="ComplianceHyperLinkValidation" description="Test Check the Compliance Profile/Audit/Fix job Hyper link Functionality">
+			<data name="mailSubject" value="pi-comp-test" />
+			<data name="LoginPageTitle" value="Cisco Prime Infrastructure - Login" />
+			<data name="profilePageTitle" value="Prime Infrastructure - Compliance Profiles" />
+			<data name="JobPageTitle" value="Prime Infrastructure - Job DashBoard" />
+			<data name="PolicyName" value="SNMPSuccess"/>
+			<data name="Status" value="Completed" />
+		</dataset>
+	</test>
+	<test id="ComplianceHyperLinkValidationAfterDelete" name="Tny1682471c">
+		<dataset id="Tny5234870c,Tny5244251c,Tny5244252c" name="ComplianceHyperLinkValidationAfterDelete" description="Test Check the compliance Profile/Audit/Fix job Hyper link Functionality After delete profile/jobs">
+			<data name="mailSubject" value="pi-comp-test" />
+			<data name="LoginPageTitle" value="Cisco Prime Infrastructure - Login" />
+			<data name="profilePageTitle" value="Prime Infrastructure - Compliance Profiles" />
+			<data name="JobPageTitle" value="Prime Infrastructure - Job DashBoard" />
+			<data name="PolicyName" value="SNMPSuccess"/>
+			<data name="Status" value="Completed" />
+		</dataset>
+	</test>
+</testdata>

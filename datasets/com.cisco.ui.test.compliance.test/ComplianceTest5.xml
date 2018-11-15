@@ -1,0 +1,73 @@
+<testdata xmlns="http://www.cisco.com/tea/0.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.cisco.com/tea/0.1.0 http://tea/schema/dataprovider-v0_1_0.xsd">
+
+    <test id="CompleEnableFunctionality" name="Tny871148c">
+		<dataset id="Tny871148c" name="CompleEnableFunctionality" description="Test Check the Compliance Enable Functionality">
+			<data name="sValue" value="49" />	
+			<data name="mailServerName" value="outbound.cisco.com" />
+			<data name="mailerAddress" value="primeinfracisco@gmail.com" />
+			<data name="mailSubject" value="Compliance-JobStatus" />
+			<data name="JobNotToasterMsg" value="Job Notification Settings saved successfully" />
+		</dataset>
+	</test>
+	
+	<test id="RbmlAndPasDatesUpdates" name="Tny5348653c,Tny5348654c,Tny5348655c">
+		<dataset id="Tny5348653c,Tny5348654c,Tny5348655c" name="RbmlAndPasDatesUpdates" description="Test check PSIRT results-">
+	        <data name="File" value="MetaData.xml" />
+	        <data name="PasFile" value="PasMetaData.xml" />
+	        <data name="RbmlFile" value="RbmlMetaData.xml" />
+		</dataset>
+	</test>
+	
+	<test id="CaveatAndCveColumnValidation" name="Tny5348657c,Tny5348658c">
+		<dataset id="Tny5348657c,Tny5348658c" name="CaveatAndCveColumnValidation" description="Test check PSIRT results-">
+        	<data name="File" value="MetaData.xml" />
+		</dataset>
+	</test>
+	
+	<test id="CopyRuningSuccess" name="Tny5348659c">
+		<dataset id="Tny5348659c" name="CopyRuningSuccess" description="Test check Copy running configuration when Fix Job Success">
+	        <data name="DeviceCsvFileName" value="CopyRunStartExp.csv" />
+	        <data name="ProfName" value="CopyRunProf" />
+	        <data name="ProDesc" value="Copy Running Startup Audit Job Profile" />
+	        <data name="Polcat" value="User Defined" />
+	        <data name="deviceid-ASA" value="asa2" />
+	        <data name="deviceid-IOS1" value="switch2a" />
+	        <data name="deviceid-IOS2" value="switch5" />
+	        <data name="policyName" value="SNMP-2rules" />
+	        <data name="exeLocation" value="C:\\Compliance\\InputFile\\policyuploadCopyRunStart.exe" />
+	        <data name="Recurrence" value="no" />
+	        <data name="ArchiveSel" value="current" />
+	        <data name="RuleTitle" value="SNMP Communities-1" />
+	        <data name="IOS1-Name" value="C3560CG-23" />
+	        <data name="AJobName" value="CopyRunAudit" />
+	        <data name="FJobName" value="CopyRunFixSucc" />
+	        <data name="FixInput1" value="public" />
+			<data name="FixInput2" value="private" />
+	        <data name="StartupSuccessMsg" value="Copying running to startup : Successful" />
+		</dataset>
+	</test>
+	
+	<test id="CopyRuningFailure" name="Tny5348660c,Tny5348663c">
+		<dataset id="Tny5348660c,Tny5348663c" name="CopyRuningFailure" description="Test check Copy running configuration when Fix Job Failure">
+	        <data name="RuleTitle" value="SNMP Communities-2" />
+	        <data name="IOS1-Name" value="C3560CG-23" />
+	        <data name="FJobName" value="CopyRunFixFail" />
+	        <data name="StartupNoMsg" value="No data is available" />
+	        <data name="FixInput1" value="public" />
+			<data name="FixInput2" value="private" />
+			<data name="deviceid-IOS1" value="switch2a" />
+		</dataset>
+     </test>
+     <test id="CopyRuningPartSuccess" name="Tny5348661c,Tny5348662c">
+		<dataset id="Tny5348661c,Tny5348662c" name="CopyRuningPartSuccess" description="Test check Copy running configuration when Partial Success">
+	        <data name="RuleTitle" value="SNMP Communities-1" />
+	        <data name="IOS1-Name" value="" />
+	        <data name="FJobName" value="CopyRunFixPartSucc" />
+	        <data name="StartupFailureMsg" value="Error occured while copying the Running config to startup config." />
+	        <data name="FixInput1" value="public" />
+			<data name="FixInput2" value="private" />
+			<data name="deviceid-IOS2" value="switch5" />
+		</dataset>
+     </test>
+</testdata>

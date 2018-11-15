@@ -1,0 +1,51 @@
+<testdata xmlns="http://www.cisco.com/tea/0.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.cisco.com/tea/0.1.0 http://tea/schema/dataprovider-v0_1_0.xsd">
+
+    <test id="CompleEnableFunctionality" name="Tny871148c">
+		<dataset id="Tny871148c" name="CompleEnableFunctionality" description="Test Check the Compliance Enable Functionality">
+			<data name="sValue" value="49" />	
+			<data name="DeviceCsvFileName" value="" />
+			<data name="deviceid-IOS1" value="" />
+			<data name="deviceid-IOS2" value="" />
+		</dataset>
+	</test>
+	
+	<test id="ComplianceDataPopulationOnPrimary" name="">
+		<dataset id="" name="ComplianceDataPopulationOnPrimary" description="Test for Running data population">
+	        <data name="ProfName" value="primeprof" />
+	        <data name="AJobName" value="primejob" />
+	        <data name="policyName" value="SNMPSuccess" />
+	        <data name="exeLocation" value="C:\\HA_COMPLIANCE\\SnmpSuccess.exe" />
+	        <data name="deviceid-IOS1" value="" />
+	        <data name="Recurrence" value="no" />
+		</dataset>
+	</test>
+	
+	<test id="CompliancePrimaryDataValidationOnSecondary" name="">
+		<dataset id="" name="CompliancePrimaryDataValidationOnSecondary" description="Test for Validation data ">
+	        <data name="deviceid-IOS1" value="" />
+	        <data name="deviceid-IOS2" value="" />
+	        <data name="deviceid-IOS3" value="" />
+	        <data name="deviceid-IOS4" value="" />
+	        <data name="deviceid-IOS5" value="" />
+		</dataset>
+	</test>
+	
+	<test id="ComplianceDataPopulationOnSecondary" name="">
+		<dataset id="" name="ComplianceDataPopulationOnSecondary" description="Test for Running data population">
+	        <data name="ProfName" value="secprof" />
+	        <data name="AJobName" value="secjob" />
+	        <data name="policyName" value="SNMPFailure" />
+	        <data name="exeLocation" value="C:\\HA_COMPLIANCE\\SnmpFailure.exe" />
+	        <data name="deviceid-IOS1" value="" />
+	        <data name="Recurrence" value="no" />
+		</dataset>
+	</test>
+	
+	<test id="ComplianceSecondaryDataValidationOnPrimary" name="">
+		<dataset id="" name="ComplianceSecondaryDataValidationOnPrimary" description="Test for Validation data ">
+	        <data name="deviceid-IOS1" value="" />
+		</dataset>
+	</test>
+	
+	

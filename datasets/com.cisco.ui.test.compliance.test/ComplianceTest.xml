@@ -1,0 +1,79 @@
+<testdata xmlns="http://www.cisco.com/tea/0.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.cisco.com/tea/0.1.0 http://tea/schema/dataprovider-v0_1_0.xsd">
+
+    <test id="CompleEnableFunctionality" name="Tny871148c">
+		<dataset id="Tny871148c" name="CompleEnableFunctionality" description="Test Check the Compliance Enable Functionality">
+			<data name="sValue" value="49" />	
+			<data name="mailServerName" value="outbound.cisco.com" />
+			<data name="mailerAddress" value="primeinfracisco@gmail.com" />
+			<data name="mailSubject" value="Compliance-JobStatus" />
+			<data name="JobNotToasterMsg" value="Job Notification Settings saved successfully" />
+		</dataset>
+	</test>
+	
+	<test id="policyImportFunctionality" name="Tny1682470c">
+		<dataset id="Tny1682470c" name="CheckpolicyImportFunctionality" description="Test Check the Compliance Policies Import Functionality">
+			<data name="Image1" value="C:\Compliance\InputImage\file.PNG" />
+			<data name="Image2" value="C:\Compliance\InputImage\open.png" />	
+			<data name="ImageLocation" value="C:\Compliance\InputFile\SNMP-Failure.xml" />
+			<data name="policyName" value="SNMPFailure" />	
+		</dataset>
+	</test>
+	<test id="RuleInputNotAllowInvalidValues" name="Tny2460514c">
+		<dataset id="Tny2460514c" name="RuleInputNotAllowInvalidValues" description="Verify Rule input should not allow invalid values in new rule input">
+			<data name="PolicyName" value="InvalidInput" />
+			<data name="PolDesc" value="Invalid input validation" />	
+			<data name="RuleTitle" value="InvalidRuleValoidation" />
+			<data name="InReq" value="Yes" />
+			<data name="RuleInputTitle" value="Strvalue" />
+		    <data name="Scope" value="Execution" />
+		    <data name="DataType" value="String" />
+		    <data name="InReq1" value="Yes" />
+			<data name="RuleInputTitle1" value="Intvalue" />
+		    <data name="Scope1" value="Execution" />
+		    <data name="DataType1" value="Integer" />
+		    <data name="CondScopeValue" value="Configuration" />
+		    <data name="Operator" value="Contains the string" />
+		    <data name="OpValue" value="snmp-server" />
+		    <data name="SelcetActMat" value="Continue" />
+		    <data name="SelcetActDMat" value="Raise a Violation" />
+		    <data name="Severity" value="Critical" />
+		    <data name="VioMsgtype" value="User defined Violation Message" />
+		    <data name="VioMessage" value="Community Not there" />
+		    <data name="ProfName" value="InvalidInputs" />
+		    <data name="ProDesc" value="InputValidation" />
+		    <data name="Polcat" value="User Defined" />
+		    <!-- <data name="" value="" />
+		    <data name="" value="" />
+		    <data name="" value="" />
+		    <data name="" value="" />
+		    <data name="" value=""> -->
+		</dataset>
+	</test>
+	<test id="policyImportWithDoubleQuotes" name="Tny2827040c">
+		<dataset id="Tny2827040c" name="policyImportWithDoubleQuotes" description="Test Check the Compliance Policies Import with DoubleQuote">
+			<data name="policyName" value="Portkonfiguration Switche" />
+			<data name="exeLocation" value="C:\\Compliance\\InputFile\\policyuploadB.exe" />
+		</dataset>
+	</test>
+	<test id="jobHelpIconValidation" name="Tny2407103c">
+		<dataset id="Tny2407103c" name="jobHelpIconValidation" description="Test Check the Compliance Jobs Help Icon functionality">
+			<data name="HelpWindowTitle" value="Cisco Prime Infrastructure Online Help" />
+		</dataset>
+	</test>
+	<test id="regExwithAndWithoutBrackets" name="Tny3292621c,Tny4606464c">
+		<dataset id="Tny3292621c,Tny4606464c" name="regExwithAndWithoutBrackets" description="Test check the Regular Expression results with and without Brackets">
+			<data name="policyName" value="LINES" />
+			<data name="exeLocation" value="C:\\Compliance\\InputFile\\policyuploadC.exe" />
+			<data name="Polcat" value="User Defined" />
+			<data name="deviceid" value="switch1" />
+			<data name="ArchiveSel" value="Current" />
+			<data name="AJobName" value="JobRegex" />
+			<data name="ProfName" value="ProfRegex" />
+			<data name="ProDesc" value="Profile Regex" />
+			<data name="SelCount" value="Selected 2" />
+			<data name="Recurrence" value="no" />
+            <!-- <data name="" value="" /> -->
+		</dataset>
+	</test>
+</testdata>

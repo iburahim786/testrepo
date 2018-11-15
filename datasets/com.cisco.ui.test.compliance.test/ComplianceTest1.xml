@@ -1,0 +1,57 @@
+<testdata xmlns="http://www.cisco.com/tea/0.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.cisco.com/tea/0.1.0 http://tea/schema/dataprovider-v0_1_0.xsd">
+
+    <test id="CompleEnableFunctionality" name="Tny871148c">
+		<dataset id="Tny871148c" name="CompleEnableFunctionality" description="Test Check the Compliance Enable Functionality">
+			<data name="sValue" value="49" />	
+			<data name="mailServerName" value="outbound.cisco.com" />
+			<data name="mailerAddress" value="primeinfracisco@gmail.com" />
+			<data name="mailSubject" value="Compliance-JobStatus" />
+			<data name="JobNotToasterMsg" value="Job Notification Settings saved successfully" />
+		</dataset>
+	</test>
+	
+	<test id="policyRuleQandAfilter" name="Tny3255312c">
+		<dataset id="Tny3255312c" name="policyRuleQandAfilter" description="Test check Rule table quick and advance filter">
+			<data name="policyName" value="MultiRulePolicy" />
+			<data name="exeLocation" value="C:\\Compliance\\InputFile\\policyuploadD.exe" />
+		</dataset>
+	</test>
+	
+	<test id="wlcShowComments" name="Tny2110500c,Tny3294660c,Tny3796431c">
+		<dataset id="Tny2110500c,Tny3294660c,Tny3796431c" name="wlcShowComments" description="Test check Wlc Show comments results">
+		<data name="policyName" value="MultiRulePolicy" />
+		<data name="deviceid" value="wlc1" />
+		<data name="deviceid1" value="switch2" />
+		</dataset>
+	</test>
+	
+	<!-- <test id="DeviceImageOSversionInPsirt" name="Tny3276012c,Tny2620098c,Tny3032896c">
+		<dataset id="Tny3276012c,Tny2620098c,Tny3032896c" name="DeviceImageOSversionInPsirt" description="Test check PSIRT results-IOS version before and After changed in the device">
+        <data name="policyName" value="MultiRulePolicy" />
+		<data name="deviceid" value="switch4" />
+		<data name="NetworkId" value="16.0.0.0" />
+		<data name="NetMask" value="255.0.0.0" />
+		<data name="SaproIpaddress" value="10.197.71.100" />
+		<data name="SaproSshUsername" value="root" />
+		<data name="SaproSshPassword" value="Snp@123" />
+		<data name="file1" value="IOS_Image_version_Change-1.sh" />
+		<data name="file2" value="IOS_Image_version_Change-2.sh" />
+		</dataset>
+	</test> -->
+	
+	<test id="ShowCmdsNonEsisting" name="Tny4102239c">
+		<dataset id="Tny4102239c" name="ShowCmdsNonEsisting" description="Test check Prime Infrastructure 3.2-Compliance Engine finds non existing show output">
+			<data name="policyName" value="new-Portchannel" />
+			<data name="exeLocation" value="C:\\Compliance\\InputFile\\policyuploadPortChnl.exe" />
+			<data name="Polcat" value="User Defined" />
+			<data name="deviceid" value="switch3" />
+			<data name='ArchiveSel' value='Current' />
+			<data name="SelCount" value="Selected 2" />
+			<data name="ProfName" value="ProfShCmd" />
+			<data name="AJobName" value="JoboneShCmd" />
+			<data name="AJobName1" value="JobsecShCmd" />
+			<data name="Recurrence" value="no" />
+		</dataset>
+	</test>
+</testdata>

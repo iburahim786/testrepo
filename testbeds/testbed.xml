@@ -1,0 +1,17 @@
+<testbed xmlns="http://www.cisco.com/tea/0.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cisco.com/tea/0.1.0 http://tea/schema/testbed-v0_1_0.xsd">
+	<driver http-proxy-host="proxy.esl.cisco.com" http-proxy-port="80"
+		https-proxy-host="proxy.esl.cisco.com" https-proxy-port="80"
+		non-proxy-hosts="*.cisco.com|10*|172*|localhost|171.69.217.*|192.168.116.*" />
+
+
+	<tomcat-application-server name="Tomcat application server"
+		host="10.126.218.186" installation-location="/opt/CSCOlumos/server"
+		application-password="Public123" application-username="root"
+		connection-password="Public123" connection-prompt="#"
+		connection-protocol="SSH" connection-username="root" http-port="80"
+		https-port="443" ssl-enabled="false" os="Linux" />
+
+
+</testbed>
+ 
